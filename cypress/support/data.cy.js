@@ -34,10 +34,13 @@ class Data {
     })
   }
 
-  loadUserData() {
+  loadGeneratedUserData() {
     return cy.readFile('cypress/fixtures/generatedUserdata.json')
   }
 
+  loadUserData() {
+    return cy.readFile('cypress/fixtures/userData.json')
+  }
 
 }
 export default new Data

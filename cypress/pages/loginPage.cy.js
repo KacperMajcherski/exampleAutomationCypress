@@ -11,10 +11,11 @@ class LoginPage {
     signupEmailField() { return cy.get('input[data-qa="signup-email"]') }
     signupBtn() { return cy.get('button[data-qa="signup-button"]') }
 
-    login(email, password) {
+    login(email, password, username) {
         this.loginEmailField().should('be.visible').click().clear().type(email)
         this.loginPasswordField().should('be.visible').click().clear().type(password)
         this.loginBtn().should('be.enabled').click()
+        mainPage.navigationBar().should('be.visible').should('contain', username)
     }
 
     registerNewUser(username, email, password, birthDay, birthMonth, birthYear, firstName, lastName, companyName, address, country, state, city, zipcode, mobileNumber) {
@@ -24,8 +25,7 @@ class LoginPage {
         registerPage.fillRegistrationForm(password, birthDay, birthMonth, birthYear, firstName, lastName, companyName, address, country, state, city, zipcode, mobileNumber)
         registerPage.accountCreatedInfo().should('be.visible')
         registerPage.continueBtn().should('be.visible').click()
-        mainPage.navigationBar().should('be.visible')
-        mainPage.navigationBar().should('contain', username)
+        mainPage.navigationBar().should('be.visible').should('contain', username)
     }
 
 }

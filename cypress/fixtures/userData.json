@@ -1,9 +1,15 @@
 {
   "testUser1": {
-    "name": "Kacper",
-    "surname": "Tester",
-    "email": "hello@cypress.io"
-  },
-  "username": "bXPIaNjUOaft",
-  "email": "sds97158@msssg.com"
+    "name": "KacperTest",
+    "firstName": "Kacper",
+    "lastName": "Tester",
+    "email": "kacpertest@kacpertest.test",
+    "password": "Start123!",
+    "paymentInfo": [
+      "Kacper Test", 
+      "123456890987654321", 
+      "311", 
+      "12", 
+      "2077"]
+  }
 }

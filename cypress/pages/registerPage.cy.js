@@ -1,5 +1,4 @@
 import data from "../support/data.cy"
-import mainPage from "./mainPage.cy"
 
 class RegisterPage {
 
@@ -28,7 +27,7 @@ class RegisterPage {
     fillRegistrationForm(password, birthDay, birthMonth, birthYear, firstName, lastName, companyName, address, country, state, city, zipcode, mobileNumber) {
         let username
         let email
-        data.loadUserData().then((data) => {
+        data.loadGeneratedUserData().then((data) => {
             username = data.username
             email = data.email
         })
